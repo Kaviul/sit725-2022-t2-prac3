@@ -1,0 +1,36 @@
+.title{
+    color: #ffffff;
+  }
+  .mainText{
+    color:#ffffff;
+  }
+  
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url(C:/Users/KAVIUL/Desktop/sit725-2022-t2-prac3/public/images/shield.png);
+  
+  }
+  
+  main {
+    flex: 1 0 auto;
+  }
+  img.jpg{
+    align-content: center;
+    width: 100px;
+    height: 100px;
+  }
+
+  img.myimage{
+    width: 50px;
+    height: 60px;
+  }
+
+  h2, h3{
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+
+  
+  
