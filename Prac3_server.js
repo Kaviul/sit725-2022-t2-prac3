@@ -1,61 +1,12 @@
-const express = require("express");
-const app = express();
+var express = require("express");
+var app = express();
 
-//var app = require('express')();
-var http = require('http').createServer(app);
-var io = require('socket.io')(http);
+app.use(express.static(__dirname+'/public'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
+var port = process.env.port || 8080;
 
-
-var port = process.env.PORT || 8080;
-
-app.use(express.static(__dirname + '/public'));
-
-let id = 1;
-const projects = [
-  {
-    id:id,
-    info: `Project Number # ${id} `,
-    img:null,
-  },
-  {
-    id: ++id,
-    info: `Project Number # ${id} `,
-    img:null,
-  },
-  {
-    id: ++id,
-    info: `Project Number # ${id} `,
-    img:null,
-  }, {
-    id: ++id,
-    info: `Project Number # ${id} `,
-    img:null,
-  }, {
-    id: ++id,
-    info: `Project Number # ${id} `,
-    img:null,
-    
-  },
-  
-]
-
-app.get("/projects", function (req, res) {
-  res.json(projects);
-});
-
-//socket test
-io.on('connection', (socket) => {
-  console.log('a user connected');
-  socket.on('disconnect', () => {
-    console.log('user disconnected');
-  });
-  setInterval(()=>{
-    socket.emit('number', parseInt(Math.random()*10));
-  }, 1000);
-
-});
-
-http.listen(port,()=>{
-  console.log(`Listening on port ${port}`);
-});
+app.listen(port,()=>{
+    console.log("App listening to: " + port)
+})

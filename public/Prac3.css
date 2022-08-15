@@ -1,36 +1,26 @@
-.title{
-    color: #ffffff;
-  }
-  .mainText{
-    color:#ffffff;
-  }
-  
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    background-image: url(C:/Users/KAVIUL/Desktop/sit725-2022-t2-prac3/public/images/shield.png);
-  
-  }
-  
-  main {
-    flex: 1 0 auto;
-  }
-  img.jpg{
-    align-content: center;
-    width: 100px;
-    height: 100px;
-  }
-
-  img.myimage{
-    width: 50px;
-    height: 60px;
-  }
-
-  h2, h3{
-    color: rgb(0, 0, 0);
-    text-align: center;
-  }
-
-  
-  
+.navbar-size {
+  width: 95%;
+  margin: 0 auto;
+}
+.user-image-size {
+  height: 50px;
+  width: 50px;
+  margin: 4px 0;
+}
+.main-body {
+  background-color: #F28487;
+  color: white;
+  /* height: 100%; */
+}
+.materialboxed-image {
+  margin: 0 auto;
+  height: 200px;
+  width: 200px;
+}
+.click-me-button {
+  background-color: #EE6E73;
+  margin-top: 50px;
+}
+.card-text {
+  color: #212121
+}
